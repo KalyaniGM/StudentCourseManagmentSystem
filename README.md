@@ -8,7 +8,22 @@ The management system will perform CRUD operations on student &amp; course. Also
 <br>•	Visual Studio 2010
 <br>•	SQL server 2014
 
+### Features
+
+### Improvements & Pending stuff
+<br>•	Authentication
+<br>•	Authorization
+<br>•	Test Cases
+<br>•	UI Improvements
+
 
 ### ClassDiagram
+![alt text](https://github.com/KalyaniGM/StudentCourseManagmentSystem/blob/master/Screenshots/Picture1.jpg)
 
+### Screenshots
 
+![alt text](https://github.com/KalyaniGM/StudentCourseManagmentSystem/blob/master/Screenshots/Picture2.jpg)
+<br>
+![alt text](https://github.com/KalyaniGM/StudentCourseManagmentSystem/blob/master/Screenshots/Picture3.jpg)
+<br>
+![alt text](https://github.com/KalyaniGM/StudentCourseManagmentSystem/blob/master/Screenshots/Picture4.jpg)

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<StudentCourseManagementSystem.Models.Student>
+@{
+    ViewBag.Title = "Student";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<fieldset>
+    <legend><b>Student Details</b></legend>
+    <p>
+        <a href="@Url.Action("AddStudent", "Student")">Add Student</a>
+    </p>
+    <table border="collapse" cellpadding="10">
+        <tr>
+            <div class="editor-label">
+                <th>
+                    @Html.DisplayNameFor(model => model.StudentFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudentSurname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudentGender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudentDOB)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudentAddress1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudentAddress2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudentAddress3)
+                </th>
+                <th>
+                    @Html.DisplayName("Action")
+                </th>
+            </div>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentFirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentSurname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentGender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentDOB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentAddress1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentAddress2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentAddress3)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditStudent", new { @id = @item.StudentID })|
+                    @Html.ActionLink("Delete", "Delete", new { @id = @item.StudentID }, new { onclick = "return confirm('Are you sure you want to delete student information?');" })
+                </td>
+            </tr>
+        }
+    </table>
+</fieldset>

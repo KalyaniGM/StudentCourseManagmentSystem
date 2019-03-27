@@ -1,0 +1,115 @@
+﻿@model StudentCourseManagementSystem.Models.Student
+@{
+    ViewBag.Title = "EditStudent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend><b>Edit Student</b></legend>
+        @Html.HiddenFor(model => model.StudentID)
+        <table>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.StudentFirstName)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.StudentFirstName)
+                        @Html.ValidationMessageFor(model => model.StudentFirstName)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.StudentSurname)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.StudentSurname)
+                        @Html.ValidationMessageFor(model => model.StudentSurname)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.StudentGender)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.DropDownListFor(m => m.StudentGender,
+                    new SelectList(Enum.GetValues(typeof(StudentCourseManagementSystem.Models.Gender))),
+                    "Select Gender")
+                        @Html.ValidationMessageFor(model => model.StudentGender)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.StudentDOB)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.StudentDOB)
+                        @Html.ValidationMessageFor(model => model.StudentDOB)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.StudentAddress1)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.StudentAddress1)
+                        @Html.ValidationMessageFor(model => model.StudentAddress1)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.StudentAddress2)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.StudentAddress2)
+                        @Html.ValidationMessageFor(model => model.StudentAddress2)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.StudentAddress3)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.StudentAddress3)
+                        @Html.ValidationMessageFor(model => model.StudentAddress3)
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List", "Student")
+</div>

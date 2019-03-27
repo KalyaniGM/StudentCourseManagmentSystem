@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <table border="1" style="width: auto; font-family: Arial">
+        <tr>
+            <td colspan="2" style="text-align: center">
+                <h3>
+                    Student Course Management System</h3>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: auto">
+                <table>
+                    <tr>
+                        <td>
+                            @Html.ActionLink("Course List", "Course","Course")                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.ActionLink("Student List", "Student","Student")
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.ActionLink("Registration", "Registration","Registration")
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>@RenderBody()
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center; font-size: x-small">
+                BLue Insurance Copyrights Reserverd
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

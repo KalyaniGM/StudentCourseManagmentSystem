@@ -1,0 +1,44 @@
+﻿@model StudentCourseManagementSystem.Models.Registration
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend><b>Registration</b></legend>
+        <table>            
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.StudentFirstName)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                    @Html.DropDownList("StudentList1", ViewBag.StudentListNames as SelectList,"Please select Student")                        
+                        @Html.ValidationMessageFor(model => model.StudentFirstName)
+                    </div>
+                </td>
+            </tr>                      
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.CourseName)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                       @Html.DropDownList("CourseList1", ViewBag.CourseListNames as SelectList, "Please select Course") 
+                        @Html.ValidationMessageFor(model => model.CourseName)
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <input type="submit" value="Register" />
+        </p>
+    </fieldset>
+}

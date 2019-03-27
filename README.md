@@ -22,8 +22,8 @@ The management system will perform CRUD operations on student &amp; course. Also
 
 ### Screenshots
 
-![alt text](https://github.com/KalyaniGM/StudentCourseManagmentSystem/blob/master/Screenshots/Picture2.jpg)
+![alt text](https://github.com/KalyaniGM/StudentCourseManagmentSystem/blob/master/Screenshots/Picture2.png)
 <br>
-![alt text](https://github.com/KalyaniGM/StudentCourseManagmentSystem/blob/master/Screenshots/Picture3.jpg)
+![alt text](https://github.com/KalyaniGM/StudentCourseManagmentSystem/blob/master/Screenshots/Picture3.png)
 <br>
-![alt text](https://github.com/KalyaniGM/StudentCourseManagmentSystem/blob/master/Screenshots/Picture4.jpg)
+![alt text](https://github.com/KalyaniGM/StudentCourseManagmentSystem/blob/master/Screenshots/Picture4.png)

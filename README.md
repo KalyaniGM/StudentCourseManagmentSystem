@@ -9,6 +9,7 @@ The management system will perform CRUD operations on student &amp; course. Also
 <br>•	SQL server 2014
 
 ### Features:
+<br>• CRUD operation of Course, Student and Regitsration
 
 ### Improvements & Pending stuff:
 <br>•	Authentication
